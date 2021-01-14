@@ -40,8 +40,12 @@ describe 'song form' do
     visit new_song_path
 
     fill_in 'song[name]', with: "My song name"
-    fill_in 'song[artist_id]', with: @artist.id
-    fill_in 'song[genre_id]', with: @genre.id
+    select 'My Artist', from: 'song[artist_id]'
+    select 'My Genre', from: 'song[genre_id]'
+
+    # fill_in 'song[name]', with: "My song name"
+    # fill_in 'song[artist_id]', with: @artist.id
+    # fill_in 'song[genre_id]', with: @genre.id
 
     click_on "Create Song"
 
@@ -54,8 +58,12 @@ describe 'song form' do
     visit edit_song_path(@song)
 
     fill_in 'song[name]', with: "My edit"
-    fill_in 'song[artist_id]', with: @artist.id
-    fill_in 'song[genre_id]', with: @genre.id
+    select 'My Artist', from: 'song[artist_id]'
+    select 'My Genre', from: 'song[genre_id]'
+
+    # fill_in 'song[name]', with: "My edit"
+    # fill_in 'song[artist_id]', with: @artist.id
+    # fill_in 'song[genre_id]', with: @genre.id
 
     click_on "Update Song"
 
