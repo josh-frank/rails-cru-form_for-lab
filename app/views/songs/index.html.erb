@@ -1,0 +1,8 @@
+<h1>View all songs</h1>
+<ul>
+    <% @all_songs.each do | song | %>
+        <li>
+        <p>"<%= song.name %>" by <%= song.artist.name %></p>
+        </li>
+    <% end %>
+</ul>

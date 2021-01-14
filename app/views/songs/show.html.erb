@@ -1,0 +1,5 @@
+<h1>Song details: <%= @this_song.name %></h1>
+<ul>
+    <li>By: <%= link_to  @this_artist.name, artist_path( @this_artist ) %></li>
+    <li>Genre: <%= link_to @this_genre.name, genre_path( @this_genre ) %></li>
+</ul>
